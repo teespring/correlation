@@ -10,12 +10,3 @@ module Correlation
     end
   end
 end
-
-if defined?(::Sidekiq)
-  ::Sidekiq.configure_server do |config|
-    config.server_middleware do |chain|
-      chain.remove self.class
-      chain.add self.class, options
-    end
-  end
-end
