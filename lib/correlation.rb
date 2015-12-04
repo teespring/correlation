@@ -1,4 +1,7 @@
 require 'correlation/utils'
+require 'correlation/rack/request'
+require 'correlation/rack/honeybadger'
+require 'correlation/rails'
 
 module Correlation
   class << self
