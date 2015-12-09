@@ -81,7 +81,7 @@ describe Correlation do
       end
 
       it "should cleanup the correlation_id at the end of the block" do
-        expect { Correlation.with_correlation_id {} }.to_not change { Correlation.correlation_id }.from(nil)
+        expect { Correlation.with_correlation_id("foo") {} }.to_not change { Correlation.correlation_id }.from(nil)
       end
     end
   end
