@@ -25,7 +25,7 @@ module Correlation
     private
 
     def correlation_id=(id)
-      if Correlation::Utils.str_not_empty?(id) && Correlation::Utils.str_not_empty?(correlation_id)
+      if Utils.str_not_empty?(id) && Utils.str_not_empty?(correlation_id)
         fail "correlation_id variable already set in current Thread context"
       end
 
