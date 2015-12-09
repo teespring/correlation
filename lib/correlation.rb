@@ -2,6 +2,7 @@ require 'correlation/utils'
 require 'correlation/rack/request'
 require 'correlation/rack/honeybadger'
 require 'correlation/rails'
+require 'correlation/sidekiq'
 
 module Correlation
   class << self
