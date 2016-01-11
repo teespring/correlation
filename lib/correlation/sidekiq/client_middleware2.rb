@@ -1,6 +1,6 @@
 module Correlation
   module Sidekiq
-    class ClientMiddleware
+    class ClientMiddleware2
       def call(_worker_class, msg, _queue)
         # NOTE: the reason why we're doing ||= instead of a simple setter
         # is because in the case of retries, the `correlation_id` key was
